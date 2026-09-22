@@ -45,19 +45,20 @@ The system consists of three identical FIR accelerator modules operating in para
                     |
                     v
              Fault Detected
+```
 ## FIR Accelerator
 
 The FIR accelerator implements the following 4-tap filter:
-
+```text
 y[n] = x[n]H0 + x[n-1]H1 + x[n-2]H2 + x[n-3]H3
-
+```
 The filter coefficients used in the design are:
-
+```text
 H0 = 1
 H1 = 2
 H2 = 3
 H3 = 4
-
+```
 The multiplication and addition operations are organized as parallel datapath operations.
 
 Triple Modular Redundancy
