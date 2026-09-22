@@ -64,11 +64,11 @@ The multiplication and addition operations are organized as parallel datapath op
 ## Triple Modular Redundancy
 
 Three identical FIR accelerator instances are used:
-```
+```text
 FIR0
 FIR1
 FIR2
-```text
+```
 Their outputs are compared using majority voting.
 
 If one module produces an incorrect result while the other two produce the same correct result, the majority voter selects the correct value.
@@ -78,11 +78,11 @@ If one module produces an incorrect result while the other two produce the same 
 A fault injection mechanism was implemented to simulate a faulty processing module.
 
 During fault injection:
-```
+```text
 FIR0 → Faulty Output
 FIR1 → Correct Output
 FIR2 → Correct Output
-```text
+```
 The majority voter continues to produce the correct final output.
 
 ## Fault Detection
@@ -90,7 +90,7 @@ The majority voter continues to produce the correct final output.
 The design includes a fault detector that compares the outputs of the three redundant modules.
 
 A fault is detected when the three module outputs are not identical.
-```
+```text
 Faulty Module
       |
       v
@@ -101,7 +101,7 @@ Fault Detector
       |
       v
 fault_detected = 1
-```text
+```
 ## Verification
 
 The design was verified using a SystemVerilog testbench.
@@ -129,7 +129,7 @@ Simulation was performed using:
 Waveform screenshots and simulation results are available in the outputs directory.
 
 ## Project Structure
-```
+```text
 DSP_Project/
 │
 ├── design.sv
@@ -140,7 +140,7 @@ DSP_Project/
     ├── TMR waveforms
     ├── fault injection results
     └── fault detection results
-```text
+```
 ## Applications
 
 Fault-tolerant digital architectures are relevant to systems where reliability is important, including:
@@ -163,9 +163,9 @@ Fault-tolerant digital architectures are relevant to systems where reliability i
 -FPGA implementation
 -Hardware-based fault injection
 ##Author
-```
+```text
 Aysha Mahmood
 B.Tech ECE Project
-```text
+```
 ## Technologies:
 -Verilog/SystemVerilog, Digital Design, DSP, TMR, RTL Verification
