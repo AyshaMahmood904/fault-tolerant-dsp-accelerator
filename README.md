@@ -61,36 +61,36 @@ H3 = 4
 ```
 The multiplication and addition operations are organized as parallel datapath operations.
 
-Triple Modular Redundancy
+## Triple Modular Redundancy
 
 Three identical FIR accelerator instances are used:
-
+```
 FIR0
 FIR1
 FIR2
-
+```text
 Their outputs are compared using majority voting.
 
 If one module produces an incorrect result while the other two produce the same correct result, the majority voter selects the correct value.
 
-Fault Injection
+## Fault Injection
 
 A fault injection mechanism was implemented to simulate a faulty processing module.
 
 During fault injection:
-
+```
 FIR0 → Faulty Output
 FIR1 → Correct Output
 FIR2 → Correct Output
-
+```text
 The majority voter continues to produce the correct final output.
 
-Fault Detection
+## Fault Detection
 
 The design includes a fault detector that compares the outputs of the three redundant modules.
 
 A fault is detected when the three module outputs are not identical.
-
+```
 Faulty Module
       |
       v
@@ -101,32 +101,35 @@ Fault Detector
       |
       v
 fault_detected = 1
-Verification
+```text
+## Verification
 
 The design was verified using a SystemVerilog testbench.
 
 The verification process includes:
 
-Reset verification
-Functional FIR output verification
-Multiple test cases
-TMR output verification
-Fault injection testing
-Fault detection verification
-Majority voting verification
+-Reset verification
+-Functional FIR output verification
+-Multiple test cases
+-TMR output verification
+-Fault injection testing
+-Fault detection verification
+-Majority voting verification
 
 The functional verification tests passed successfully, and the fault injection experiment demonstrated that the system maintained the correct output despite a fault in one redundant module.
 
-Simulation
+## Simulation
 
 Simulation was performed using:
 
-Verilog/SystemVerilog
-Icarus Verilog
-EPWave
+-Verilog/SystemVerilog
+-Icarus Verilog
+-EPWave
 
 Waveform screenshots and simulation results are available in the outputs directory.
-Project Structure
+
+## Project Structure
+```
 DSP_Project/
 │
 ├── design.sv
@@ -137,30 +140,32 @@ DSP_Project/
     ├── TMR waveforms
     ├── fault injection results
     └── fault detection results
-Applications
+```text
+## Applications
 
 Fault-tolerant digital architectures are relevant to systems where reliability is important, including:
 
-Safety-critical digital systems
-Aerospace and satellite electronics
-Industrial control systems
-Reliable DSP systems
-Embedded computing
-Semiconductor and ASIC/SoC design
-Future Improvements
+-Safety-critical digital systems
+-Aerospace and satellite electronics
+-Industrial control systems
+-Reliable DSP systems
+-Embedded computing
+-Semiconductor and ASIC/SoC design
+-Future Improvements
 
-Possible extensions include:
+## Possible extensions include:
 
-Parameterized FIR filter architecture
-Larger number of filter taps
-Automatic fault localization
-Synthesis and area analysis
-Power and timing analysis
-FPGA implementation
-Hardware-based fault injection
-Author
-
+-Parameterized FIR filter architecture
+-Larger number of filter taps
+-Automatic fault localization
+-Synthesis and area analysis
+-Power and timing analysis
+-FPGA implementation
+-Hardware-based fault injection
+##Author
+```
 Aysha Mahmood
 B.Tech ECE Project
-
-Technologies: Verilog/SystemVerilog, Digital Design, DSP, TMR, RTL Verification
+```text
+## Technologies:
+-Verilog/SystemVerilog, Digital Design, DSP, TMR, RTL Verification
