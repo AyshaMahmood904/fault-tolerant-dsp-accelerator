@@ -45,7 +45,7 @@ The system consists of three identical FIR accelerator modules operating in para
                     |
                     v
              Fault Detected
-FIR Accelerator
+## FIR Accelerator
 
 The FIR accelerator implements the following 4-tap filter:
 
