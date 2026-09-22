@@ -23,29 +23,7 @@ The project also includes fault injection and an online fault detection mechanis
 ## Architecture
 
 The system consists of three identical FIR accelerator modules operating in parallel.
-
-```text
-                    Input Sample
-                         |
-              +----------+----------+
-              |          |          |
-              v          v          v
-           FIR0         FIR1       FIR2
-              |          |          |
-              |    Fault Injection
-              |          |          |
-              +----------+----------+
-                         |
-                  Majority Voter
-                         |
-                         v
-                   Final Output
-
-              Fault Detector
-                    |
-                    v
-             Fault Detected
-```
+![Fault-Tolerant DSP Accelerator Architecture](architecture.png)
 ## FIR Accelerator
 
 The FIR accelerator implements the following 4-tap filter:
