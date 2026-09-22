@@ -108,13 +108,13 @@ The design was verified using a SystemVerilog testbench.
 
 The verification process includes:
 
--Reset verification
--Functional FIR output verification
--Multiple test cases
--TMR output verification
--Fault injection testing
--Fault detection verification
--Majority voting verification
+- Reset verification
+- Functional FIR output verification
+- Multiple test cases
+- TMR output verification
+- Fault injection testing
+- Fault detection verification
+- Majority voting verification
 
 The functional verification tests passed successfully, and the fault injection experiment demonstrated that the system maintained the correct output despite a fault in one redundant module.
 
@@ -122,9 +122,9 @@ The functional verification tests passed successfully, and the fault injection e
 
 Simulation was performed using:
 
--Verilog/SystemVerilog
--Icarus Verilog
--EPWave
+- Verilog/SystemVerilog
+- Icarus Verilog
+- EPWave
 
 Waveform screenshots and simulation results are available in the outputs directory.
 
@@ -145,27 +145,27 @@ DSP_Project/
 
 Fault-tolerant digital architectures are relevant to systems where reliability is important, including:
 
--Safety-critical digital systems
--Aerospace and satellite electronics
--Industrial control systems
--Reliable DSP systems
--Embedded computing
--Semiconductor and ASIC/SoC design
--Future Improvements
+- Safety-critical digital systems
+- Aerospace and satellite electronics
+- Industrial control systems
+- Reliable DSP systems
+- Embedded computing
+- Semiconductor and ASIC/SoC design
+- Future Improvements
 
 ## Possible extensions include:
 
--Parameterized FIR filter architecture
--Larger number of filter taps
--Automatic fault localization
--Synthesis and area analysis
--Power and timing analysis
--FPGA implementation
--Hardware-based fault injection
+- Parameterized FIR filter architecture
+- Larger number of filter taps
+- Automatic fault localization
+- Synthesis and area analysis
+- Power and timing analysis
+- FPGA implementation
+- Hardware-based fault injection
 ##Author
 ```text
 Aysha Mahmood
 B.Tech ECE Project
 ```
 ## Technologies:
--Verilog/SystemVerilog, Digital Design, DSP, TMR, RTL Verification
+- Verilog/SystemVerilog, Digital Design, DSP, TMR, RTL Verification
